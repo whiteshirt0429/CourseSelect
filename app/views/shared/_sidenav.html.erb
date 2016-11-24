@@ -38,7 +38,18 @@
             <li class="list-group-item">
               <%= link_to list_courses_path do %>
                   <span class="glyphicon glyphicon-chevron-right"></span> 选修课程
-                  <span class="label label-info pull-right"><%= (Course.all-current_user.courses).length %></span>
+                  <!-- TS add -->
+                  <% @courses = Course.all %>
+                  <% @selectable_num = 0 %>
+                  <% @courses.each do |c| %>
+                    <% @selectable_num += 1 if (c.isopen == true && current_user.courses.index(c)==nil) %>
+                  <% end %>
+                  <span class="label label-info pull-right">
+                    <!-- old command
+                      <%= (Course.all-current_user.courses).length %>
+                      -->
+                    <%= @selectable_num %>
+                  </span>
               <% end %>
             </li>
             <li class="list-group-item">

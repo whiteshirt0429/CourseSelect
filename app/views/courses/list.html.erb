@@ -23,6 +23,8 @@
               <th>授课方式</th>
               <th>考试方式</th>
               <th>主讲教师</th>
+              <!-- ts add -->
+              <th>是否开课</th>
 
             </tr>
             </thead>
@@ -40,6 +42,8 @@
                   <td><%= course.teaching_type %></td>
                   <td><%= course.exam_type %></td>
                   <td><%= course.teacher.name %></td>
+                  <!-- ts add -->
+                  <td><%= course.isopen %></td>
                   <td><%= link_to "加入课程", select_course_path(course), class: 'btn-sm btn-info' %></td>
 
                 </tr>

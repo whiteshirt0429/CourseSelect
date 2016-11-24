@@ -42,12 +42,26 @@ class CoursesController < ApplicationController
     flash={:success => "成功删除课程: #{@course.name}"}
     redirect_to courses_path, flash: flash
   end
+  
+  def open
+    @course = Course.find_by_id(params[:id])
+    @course.isopen = true
+    @course.save
+    redirect_to courses_path, flash: {:success => "已经成功开启该课程:#{ @course.name}"}
+  end
+  def close
+    @course = Course.find_by_id(params[:id])
+    @course.isopen = false
+    @course.save
+    redirect_to courses_path, flash: {:success => "已经成功关闭该课程:#{ @course.name}"}
+  end
 
   #-------------------------for students----------------------
 
   def list
-    @course=Course.all
+    @course=Course.where(isopen: true)
     @course=@course-current_user.courses
+    # ts add
   end
 
   def select

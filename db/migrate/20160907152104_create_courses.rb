@@ -14,6 +14,9 @@ class CreateCourses < ActiveRecord::Migration
       t.string :course_time
       t.string :course_week
       t.belongs_to :teacher
+      
+      #ts add
+      #t.boolean :open, default: false
 
       t.timestamps null: false
     end
