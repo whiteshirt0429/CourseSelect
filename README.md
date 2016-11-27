@@ -1,7 +1,8 @@
 # CourseSelect 课程系统-高级软件工程Final Project
 2016E8013261136
 
-##大作业内容
+## merge
+161127 merge dev to master
 
 ##附:frok时的旧信息
 这个样本系统是基于国科大研究生课程 (高级软件工程) 开发的项目,目的是帮助入门者学习RoR (Ruby on Rails) 
