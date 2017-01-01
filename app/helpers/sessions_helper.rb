@@ -27,8 +27,6 @@ module SessionsHelper
     @current_visit = nil
   end
 
-
-
   # Returns the user corresponding to the remember token cookie.
   def current_user
     if session[:user_id]

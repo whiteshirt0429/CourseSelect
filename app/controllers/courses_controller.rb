@@ -78,6 +78,16 @@ class CoursesController < ApplicationController
     redirect_to courses_path, flash: flash
   end
 
+  def show_courses_table
+    @ts_courses = current_user.courses
+    @course_matrix = nil
+    current_user.courses.each do |course|
+      # c.course_time c.name
+      # hash_1 {course_name: "math", course_time: "周四(7-8)"}
+      tem_hash = {course_name: course.name, course_time: course.course_time}
+      @course_matrix = merge_course_to_hash_matrix(@course_matrix, tem_hash)
+    end
+  end
 
   #-------------------------for both teachers and students----------------------
 
