@@ -46,8 +46,7 @@
 使用前需要安装Bundler，Gem，Ruby，Rails等依赖环境。
 
 请根据本地系统下载安装[postgresql](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup)数据库，并运行`psql -h localhost`检查安装情况。
-
-
+####
 ## 安装
 
 在终端（MacOS或Linux）中执行以下代码
