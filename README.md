@@ -56,9 +56,10 @@
 $ git clone https://github.com/PENGZhaoqing/CourseSelect
 $ cd CourseSelect
 $ bundle install
+sudo service postgresql start
 $ rake db:migrate
 $ rake db:seed
-$ rails s 
+$ rails s
 ```
 
 在浏览器中输入`localhost:3000`访问主页
