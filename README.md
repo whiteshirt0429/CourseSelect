@@ -59,6 +59,8 @@ sudo service postgresql start
 $ rake db:migrate
 $ rake db:seed
 $ rails s
+
+rake db:migrate:reset
 git init
 git add .
 git commit -m""
