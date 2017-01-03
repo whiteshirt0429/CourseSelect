@@ -59,6 +59,11 @@ sudo service postgresql start
 $ rake db:migrate
 $ rake db:seed
 $ rails s
+git init
+git add .
+git commit -m""
+git remote add origin 机上你所创建项目的版本库名称（如果提示fatal：remote origin already exists。先输入 git remote rm origin,再重复第四部）
+git push origin master
 ```
 
 在浏览器中输入`localhost:3000`访问主页
